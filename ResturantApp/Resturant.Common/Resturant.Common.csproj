@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="keyAttribute.cs" />
+    <Compile Remove="prop.cs" />
+  </ItemGroup>
+
 </Project>

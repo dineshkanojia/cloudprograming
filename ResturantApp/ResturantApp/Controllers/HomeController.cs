@@ -1,29 +1,77 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
+using Resturant.Common;
+using Resturant.Infrastructure;
+using Resturant.Repository;
 using ResturantApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AuthorizeAttribute = Microsoft.AspNetCore.Authorization.AuthorizeAttribute;
 
 namespace ResturantApp.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private RestuarantContext _resturantContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(RestuarantContext RestuarantContext)
         {
-            _logger = logger;
+            _resturantContext = RestuarantContext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var customerRepository = new CustomerRepository(_resturantContext);
+            var itemRepository = new ItemsRepository(_resturantContext);
+            var paymentTypeRepository = new PaymentTypesRepository(_resturantContext);
+
+            var custDropDown = customerRepository.GetAllCustomers();
+            custDropDown.Insert(0, new Customers { CustomerId = 0, CustomerName = "-- Select --" });
+
+
+            var itemDropDown = itemRepository.GetAllItems();
+            itemDropDown.Insert(0, new Items { ItemId = 0, ItemName = "-- Select --" });
+
+
+
+            var paymentDropDown = paymentTypeRepository.GetAllPaymentTypes();
+            paymentDropDown.Insert(0, new PaymentTypes { PaymentTyepId = 0, PaymentTypeName = "-- Select --" });
+
+
+            var tuple = new Tuple<IEnumerable<Customers>, IEnumerable<Items>, IEnumerable<PaymentTypes>>(
+                custDropDown,
+                itemDropDown,
+                paymentDropDown
+                );
+
+
+            return View(tuple);
         }
+
+        [HttpGet]
+        public JsonResult getItemUnitPrice(int itemId)
+        {
+            decimal unitPrice = _resturantContext.Items.FirstOrDefault(i => i.ItemId == itemId).ItemPrice;
+            return Json(unitPrice);
+        }
+
+        [HttpPost]
+        public JsonResult Index([FromBody] Orders orders)
+        {
+            OrdersRepository ordersRepository = new OrdersRepository(_resturantContext);
+            if (ordersRepository.AddOrder(orders))
+            {
+                return Json("Order created successfully.");
+            }
+            return Json("Order not saved.");
+        }
+
 
         public IActionResult Privacy()
         {

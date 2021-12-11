@@ -17,4 +17,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Resturant.Common\Resturant.Common.csproj" />
+    <ProjectReference Include="..\Resturant.Infrastructure\Resturant.Infrastructure.csproj" />
+    <ProjectReference Include="..\Resturant.Repository\Resturant.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

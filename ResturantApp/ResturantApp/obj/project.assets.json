@@ -2170,6 +2170,44 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Resturant.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Resturant.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resturant.Common.dll": {}
+        }
+      },
+      "Resturant.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "Resturant.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Resturant.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resturant.Infrastructure.dll": {}
+        }
+      },
+      "Resturant.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Resturant.Common": "1.0.0",
+          "Resturant.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Resturant.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Resturant.Repository.dll": {}
+        }
       }
     }
   },
@@ -7507,6 +7545,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Resturant.Common/1.0.0": {
+      "type": "project",
+      "path": "../Resturant.Common/Resturant.Common.csproj",
+      "msbuildProject": "../Resturant.Common/Resturant.Common.csproj"
+    },
+    "Resturant.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Resturant.Infrastructure/Resturant.Infrastructure.csproj",
+      "msbuildProject": "../Resturant.Infrastructure/Resturant.Infrastructure.csproj"
+    },
+    "Resturant.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Resturant.Repository/Resturant.Repository.csproj",
+      "msbuildProject": "../Resturant.Repository/Resturant.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7516,7 +7569,10 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "Resturant.Common >= 1.0.0",
+      "Resturant.Infrastructure >= 1.0.0",
+      "Resturant.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7527,11 +7583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Personal\\NCI\\Assignment\\CPP\\ResturantApp\\ResturantApp\\ResturantApp\\ResturantApp.csproj",
+      "projectUniqueName": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\ResturantApp\\ResturantApp.csproj",
       "projectName": "ResturantApp",
-      "projectPath": "E:\\Personal\\NCI\\Assignment\\CPP\\ResturantApp\\ResturantApp\\ResturantApp\\ResturantApp.csproj",
+      "projectPath": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\ResturantApp\\ResturantApp.csproj",
       "packagesPath": "C:\\Users\\DINESH\\.nuget\\packages\\",
-      "outputPath": "E:\\Personal\\NCI\\Assignment\\CPP\\ResturantApp\\ResturantApp\\ResturantApp\\obj\\",
+      "outputPath": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\ResturantApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -7553,7 +7609,17 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\Resturant.Common\\Resturant.Common.csproj": {
+              "projectPath": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\Resturant.Common\\Resturant.Common.csproj"
+            },
+            "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\Resturant.Infrastructure\\Resturant.Infrastructure.csproj": {
+              "projectPath": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\Resturant.Infrastructure\\Resturant.Infrastructure.csproj"
+            },
+            "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\Resturant.Repository\\Resturant.Repository.csproj": {
+              "projectPath": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\Resturant.Repository\\Resturant.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

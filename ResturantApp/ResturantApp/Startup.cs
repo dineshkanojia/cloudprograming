@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Resturant.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +25,10 @@ namespace ResturantApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string strConnectionString = Configuration.GetConnectionString("ResturantAppDBContextConnection");
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddDbContext<RestuarantContext>(option => option.UseSqlServer(strConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
