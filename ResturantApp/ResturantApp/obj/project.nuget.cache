@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PMrLpW+/XqGNpMn5r4nuOC2H+CXkBBLOfvOzVkzG+aFHu0Yw3JVVX+p+Ff0utC4pxzfZAglw2tmmf6zn1m4P3Q==",
+  "dgSpecHash": "vc3fAEbUSr1M4FouHN1/KnHX76UDxDDygEpN9TK54vnKcpTmfdnQ4pFO2xS1HZPTp1/k1t/ii83SzAV+vcjoQg==",
   "success": true,
   "projectFilePath": "E:\\Personal\\NCI\\Assignment\\CPP\\Resturant\\ResturantApp\\ResturantApp\\ResturantApp\\ResturantApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DINESH\\.nuget\\packages\\awssdk.core\\3.7.5.5\\awssdk.core.3.7.5.5.nupkg.sha512",
+    "C:\\Users\\DINESH\\.nuget\\packages\\awssdk.simplenotificationservice\\3.7.3.6\\awssdk.simplenotificationservice.3.7.3.6.nupkg.sha512",
     "C:\\Users\\DINESH\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DINESH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
     "C:\\Users\\DINESH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.12\\microsoft.aspnetcore.cryptography.keyderivation.5.0.12.nupkg.sha512",

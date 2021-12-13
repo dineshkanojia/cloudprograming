@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ResturantApp/1.0.0": {
         "dependencies": {
+          "AWSSDK.SimpleNotificationService": "3.7.3.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
           "Microsoft.AspNetCore.Identity.UI": "5.0.12",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.10",
@@ -324,6 +325,31 @@
         },
         "compile": {
           "ResturantApp.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.5.5": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.5.5"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.7.3.6": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.5.5"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.3.6"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -3661,6 +3687,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7I71LbzIXuakEuRDu9vKnSWGMe0f6E51+z7Pq9hcxAUFzVcxp74XZY2/NWTtjy7brTupbOacOO2+UsaSwLJCdA==",
+      "path": "awssdk.core/3.7.5.5",
+      "hashPath": "awssdk.core.3.7.5.5.nupkg.sha512"
+    },
+    "AWSSDK.SimpleNotificationService/3.7.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yoyDV1vrIKrvuP2gkpgIwPhzXn373fSlt0ZiBAq/tpeZJnN0vVRjHNtoPYcyxc2XCI3+Aun1Rci9hL84gWT/5w==",
+      "path": "awssdk.simplenotificationservice/3.7.3.6",
+      "hashPath": "awssdk.simplenotificationservice.3.7.3.6.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
