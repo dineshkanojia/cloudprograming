@@ -67,6 +67,22 @@ namespace ResturantApp.Controllers
             OrdersRepository ordersRepository = new OrdersRepository(_resturantContext);
             if (ordersRepository.AddOrder(orders))
             {
+                Utility.AWSNotification aWSNotification = new Utility.AWSNotification();
+
+                var customer = _resturantContext.Customers.FirstOrDefault(c => c.CustomerId == orders.CustomerId);
+
+                //Mobile Notification
+                aWSNotification.CreateTopic("ResturantTopic", "Invoice");
+                aWSNotification.CreateMobileSubscription("ResturantTopic", customer.Mobile);
+                aWSNotification.PublishMobileMessage("Your Invoice number: " + orders.OrderNumber, customer.Mobile);
+
+
+                //Email Notification
+                aWSNotification.CreateEmailSubscription("ResturantTopic", customer.Email);
+                aWSNotification.PublishEmailMessage("ResturantTopic", "Your Invoice number: " + orders.OrderNumber, "Invoice Number");
+
+
+
                 return Json("Order created successfully.");
             }
             return Json("Order not saved.");

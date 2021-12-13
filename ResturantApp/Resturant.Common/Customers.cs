@@ -12,5 +12,7 @@ namespace Resturant.Common
         [Key]
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }
+        public string Email { get; set; }
+        public string Mobile { get; set; }
     }
 }

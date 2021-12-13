@@ -1342,3 +1342,4 @@ E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\ResturantApp\
 E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\ResturantApp\obj\Debug\net5.0\ResturantApp.genruntimeconfig.cache
 E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\ResturantApp\bin\Debug\net5.0\AWSSDK.Core.dll
 E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\ResturantApp\bin\Debug\net5.0\AWSSDK.SimpleNotificationService.dll
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\ResturantApp\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
