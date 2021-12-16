@@ -3,8 +3,8 @@
   "profile": "default",
   "region": "us-east-1",
   "application": "ResturantApp",
-  "environment": "ResturantApp-dev",
-  "cname": "resturanta-dev",
+  "environment": "ResturantApp-test",
+  "cname": "resturantapp-test",
   "solution-stack": "64bit Windows Server Core 2019 v2.8.0 running IIS 10.0",
   "environment-type": "SingleInstance",
   "instance-profile": "aws-elasticbeanstalk-ec2-role",
@@ -14,5 +14,5 @@
   "key-pair": "resturantappProd",
   "iis-website": "Default Web Site",
   "app-path": "/",
-  "enable-xray": true
+  "enable-xray": false
 }
