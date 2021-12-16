@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using AuthorizeAttribute = Microsoft.AspNetCore.Authorization.AuthorizeAttribute;
 
@@ -65,23 +66,33 @@ namespace ResturantApp.Controllers
         public JsonResult Index([FromBody] Orders orders)
         {
             OrdersRepository ordersRepository = new OrdersRepository(_resturantContext);
-            if (ordersRepository.AddOrder(orders))
+            var ordenumber = ordersRepository.AddOrder(orders);
+            if(ordenumber > 0)
             {
                 Utility.AWSNotification aWSNotification = new Utility.AWSNotification();
 
                 var customer = _resturantContext.Customers.FirstOrDefault(c => c.CustomerId == orders.CustomerId);
 
+
                 //Mobile Notification
                 aWSNotification.CreateTopic("ResturantTopic", "Invoice");
                 aWSNotification.CreateMobileSubscription("ResturantTopic", customer.Mobile);
-                aWSNotification.PublishMobileMessage("Your Invoice number: " + orders.OrderNumber, customer.Mobile);
+                aWSNotification.PublishMobileMessage("Your Invoice number: " + ordenumber, customer.Mobile);
 
+
+                StringBuilder sb = new StringBuilder();
+                sb.Append("Dear " + customer.CustomerName);
+                sb.Append(Environment.NewLine);
+                sb.Append("You have place an order and we are deighted that our transaction completed successfully.");
+                sb.Append(Environment.NewLine);
+                sb.Append("Pleasure to have a business with you.");
+                sb.Append(Environment.NewLine);
+                sb.Append(Environment.NewLine);
+                sb.Append("Thanks.");
 
                 //Email Notification
                 aWSNotification.CreateEmailSubscription("ResturantTopic", customer.Email);
-                aWSNotification.PublishEmailMessage("ResturantTopic", "Your Invoice number: " + orders.OrderNumber, "Invoice Number");
-
-
+                aWSNotification.PublishEmailMessage("ResturantTopic", sb.ToString(), "Your Invoice number: " + ordenumber);
 
                 return Json("Order created successfully.");
             }

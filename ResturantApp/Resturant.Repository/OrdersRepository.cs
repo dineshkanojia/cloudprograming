@@ -24,7 +24,7 @@ namespace Resturant.Repository
             return orders;
         }
 
-        public bool AddOrder(Orders orders)
+        public int AddOrder(Orders orders)
         {
             Orders objOrders = new Orders();
             objOrders.CustomerId = orders.CustomerId;
@@ -61,7 +61,7 @@ namespace Resturant.Repository
                 _resturantContext.SaveChanges();
             }
 
-            return true;
+            return orderId;
         }
     }
 }
