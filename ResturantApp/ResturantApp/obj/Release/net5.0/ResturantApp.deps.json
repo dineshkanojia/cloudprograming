@@ -33,12 +33,16 @@
     ".NETCoreApp,Version=v5.0": {
       "ResturantApp/1.0.0": {
         "dependencies": {
+          "AWSSDK.SimpleNotificationService": "3.7.3.6",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.12",
           "Microsoft.AspNetCore.Identity.UI": "5.0.12",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.12",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "Resturant.Common": "1.0.0",
+          "Resturant.Infrastructure": "1.0.0",
+          "Resturant.Repository": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -321,6 +325,31 @@
         },
         "compile": {
           "ResturantApp.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.5.5": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.5.5"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.SimpleNotificationService/3.7.3.6": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.5.5"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.3.6"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.SimpleNotificationService.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -1955,6 +1984,38 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Resturant.Common/1.0.0": {
+        "runtime": {
+          "Resturant.Common.dll": {}
+        },
+        "compile": {
+          "Resturant.Common.dll": {}
+        }
+      },
+      "Resturant.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12",
+          "Resturant.Common": "1.0.0"
+        },
+        "runtime": {
+          "Resturant.Infrastructure.dll": {}
+        },
+        "compile": {
+          "Resturant.Infrastructure.dll": {}
+        }
+      },
+      "Resturant.Repository/1.0.0": {
+        "dependencies": {
+          "Resturant.Common": "1.0.0",
+          "Resturant.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Resturant.Repository.dll": {}
+        },
+        "compile": {
+          "Resturant.Repository.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3621,6 +3682,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AWSSDK.Core/3.7.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7I71LbzIXuakEuRDu9vKnSWGMe0f6E51+z7Pq9hcxAUFzVcxp74XZY2/NWTtjy7brTupbOacOO2+UsaSwLJCdA==",
+      "path": "awssdk.core/3.7.5.5",
+      "hashPath": "awssdk.core.3.7.5.5.nupkg.sha512"
+    },
+    "AWSSDK.SimpleNotificationService/3.7.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yoyDV1vrIKrvuP2gkpgIwPhzXn373fSlt0ZiBAq/tpeZJnN0vVRjHNtoPYcyxc2XCI3+Aun1Rci9hL84gWT/5w==",
+      "path": "awssdk.simplenotificationservice/3.7.3.6",
+      "hashPath": "awssdk.simplenotificationservice.3.7.3.6.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
@@ -4565,6 +4640,21 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Resturant.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Resturant.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Resturant.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

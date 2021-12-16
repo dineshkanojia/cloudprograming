@@ -1,0 +1,15 @@
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\bin\Release\net5.0\Resturant.Infrastructure.deps.json
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\bin\Release\net5.0\Resturant.Infrastructure.dll
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\bin\Release\net5.0\ref\Resturant.Infrastructure.dll
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\bin\Release\net5.0\Resturant.Infrastructure.pdb
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\bin\Release\net5.0\Resturant.Common.dll
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\bin\Release\net5.0\Resturant.Common.pdb
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.csproj.AssemblyReference.cache
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.AssemblyInfoInputs.cache
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.AssemblyInfo.cs
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.csproj.CopyComplete
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.dll
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\ref\Resturant.Infrastructure.dll
+E:\Personal\NCI\Assignment\CPP\Resturant\ResturantApp\ResturantApp\Resturant.Infrastructure\obj\Release\net5.0\Resturant.Infrastructure.pdb
